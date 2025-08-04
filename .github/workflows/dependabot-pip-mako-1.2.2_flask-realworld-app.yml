@@ -38,9 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            .
-            !venv/
+          path: conduit/
 
   deploy:
     runs-on: ubuntu-latest
@@ -68,4 +66,5 @@ jobs:
         with:
           app-name: 'flask-realworld-app'
           slot-name: 'Production'
+
           
