@@ -29,8 +29,8 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: Copy requirements.txt into conduit/
+        run: cp requirements.txt conduit/
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -68,3 +68,4 @@ jobs:
           slot-name: 'Production'
 
           
+
